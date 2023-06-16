@@ -6,12 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.6.5] - WIP
 ### Added
-- Load and save state option in-game
-- Thumbstick > D-Pad and D-Pad > Thumbstick toggle option in-game
-- Ability to convert and copy (move to `/roms`) or install `.cia` roms
+- Added ability to convert CTR Importable archive (`.cia`) roms to Official Game Card (`.cci`) roms
+- Added ability to import CTR Importable Archive (`.cia`) roms
 
-### Changed
-- Right thumbstick is removed when "Use New 3DS" option is disabled
 
 ## [1.0.6.4] - 8th June 2023
 ### Added
