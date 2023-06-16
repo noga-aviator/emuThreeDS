@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.6.5] - WIP
 ### Added
-- Added ability to convert CTR Importable archive (`.cia`) roms to Official Game Card (`.cci`) roms
+- Added ability to convert CTR Importable Archive (`.cia`) roms to Official Game Card (`.cci`) roms
 - Added ability to import CTR Importable Archive (`.cia`) roms
 
 
