@@ -6,8 +6,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.6.5] - WIP
 ### Added
-- Added ability to convert CTR Importable Archive (`.cia`) roms to Official Game Card (`.cci`) roms
+#### Application
+- Added support for iOS and iPadOS 14
+  - <span style="color: rgb(255, 149, 0)">This will need to be tested thoroughly</span>
+
+#### Library
 - Added ability to import CTR Importable Archive (`.cia`) roms
+  - Tapping an imported rom will launch it but no other functionality is available yet
+
+### Changed
+#### Library
+- Changed the user interface to be more simplified for now
+
+### Fixed
+#### Emulation
+- Fixed a crash where the on-screen controller would disappear and reappear when rotating the device by ditching Apple's GCVirtualController and making my own
+- Fixed an issue where the emulation would crash when rotating the device
 
 
 ## [1.0.6.4] - 8th June 2023
