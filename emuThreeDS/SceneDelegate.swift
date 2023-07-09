@@ -5,9 +5,11 @@
 //  Created by Antique on 14/6/2023.
 //
 
+import SwiftUI
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    var citraWrapper = CitraWrapper.shared()
 
     var window: UIWindow?
 
@@ -25,10 +27,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         
-        var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        configuration.headerMode = .supplementary
         
-        window.rootViewController = UINavigationController(rootViewController: LibraryViewController(collectionViewLayout: UICollectionViewCompositionalLayout.list(using: configuration)))
+        let components = Calendar.current.dateComponents([.weekOfYear], from: Date())
+        print(components.weekOfYear)
+        if components.weekOfYear ?? 27 >= 28 {
+            window.rootViewController = UIHostingController(rootView: TrialOverView())
+        } else {
+            var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+            configuration.headerMode = .supplementary
+            
+            let libraryViewController = LibraryViewController(collectionViewLayout: UICollectionViewCompositionalLayout.list(using: configuration))
+            let libraryNavigationController = UINavigationController(rootViewController: libraryViewController)
+            libraryViewController.tabBarItem = UITabBarItem(title: "Library", image: UIImage(systemName: "books.vertical.fill"), tag: 0)
+            
+            let settingsViewController = UIHostingController(rootView: SettingsView())
+            settingsViewController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gearshape.fill"), tag: 1)
+            
+            let tabBarController = UITabBarController()
+            tabBarController.viewControllers = [libraryNavigationController, settingsViewController]
+            
+            window.rootViewController = tabBarController
+        }
+        
+        window.tintColor = .systemIndigo
         window.makeKeyAndVisible()
     }
 
@@ -52,14 +73,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+        citraWrapper.resume()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        citraWrapper.pause()
     }
-
-
 }
-

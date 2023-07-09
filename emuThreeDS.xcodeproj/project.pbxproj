@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C12D99C62A399EAA006FC1E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D99C52A399EAA006FC1E0 /* AppDelegate.swift */; };
 		C12D99C82A399EAA006FC1E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D99C72A399EAA006FC1E0 /* SceneDelegate.swift */; };
-		C12D99CA2A399EAA006FC1E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D99C92A399EAA006FC1E0 /* ViewController.swift */; };
 		C12D99CF2A399EAB006FC1E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C12D99CE2A399EAB006FC1E0 /* Assets.xcassets */; };
 		C12D99D22A399EAB006FC1E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12D99D02A399EAB006FC1E0 /* LaunchScreen.storyboard */; };
 		C12D9D362A399EE5006FC1E0 /* source.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12D99DF2A399EE4006FC1E0 /* source.cpp */; };
@@ -339,8 +338,6 @@
 		C12D9E7C2A399EE6006FC1E0 /* text_formatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12D9D1F2A399EE5006FC1E0 /* text_formatter.cpp */; };
 		C12D9E7D2A399EE6006FC1E0 /* filter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12D9D232A399EE5006FC1E0 /* filter.cpp */; };
 		C12D9E7E2A399EE6006FC1E0 /* settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12D9D272A399EE5006FC1E0 /* settings.cpp */; };
-		C12DE3342A399EFD006FC1E0 /* libboost_iostreams.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E832A399EEA006FC1E0 /* libboost_iostreams.a */; };
-		C12DE3352A399EFD006FC1E0 /* libboost_program_options.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E842A399EEA006FC1E0 /* libboost_program_options.a */; };
 		C12DE3AC2A399EFE006FC1E0 /* ini.c in Sources */ = {isa = PBXBuildFile; fileRef = C12DE2442A399EFB006FC1E0 /* ini.c */; };
 		C12DE3AD2A399EFE006FC1E0 /* INIReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12DE2452A399EFB006FC1E0 /* INIReader.cpp */; };
 		C12DE4782A399EFE006FC1E0 /* parser_shbin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12DE3122A399EFC006FC1E0 /* parser_shbin.cpp */; };
@@ -358,53 +355,67 @@
 		C12DE4842A399EFF006FC1E0 /* lodepng.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12DE3202A399EFC006FC1E0 /* lodepng.cpp */; };
 		C12DE4852A399EFF006FC1E0 /* lodepng_fuzzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12DE3212A399EFC006FC1E0 /* lodepng_fuzzer.cpp */; };
 		C12DE4862A399EFF006FC1E0 /* pngdetail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12DE3222A399EFC006FC1E0 /* pngdetail.cpp */; };
-		C12DE48D2A399EFF006FC1E0 /* libMoltenVK.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3292A399EFC006FC1E0 /* libMoltenVK.dylib */; };
-		C12DE4942A399EFF006FC1E0 /* libboost_serialization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3302A399EFC006FC1E0 /* libboost_serialization.a */; };
-		C12DE4952A399F74006FC1E0 /* libavcodec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32B2A399EFC006FC1E0 /* libavcodec.framework */; };
-		C12DE4962A399F74006FC1E0 /* libavcodec.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32B2A399EFC006FC1E0 /* libavcodec.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4972A399F74006FC1E0 /* libavformat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E852A399EEA006FC1E0 /* libavformat.framework */; };
-		C12DE4982A399F74006FC1E0 /* libavformat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E852A399EEA006FC1E0 /* libavformat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4992A399F74006FC1E0 /* libavutil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E882A399EEA006FC1E0 /* libavutil.framework */; };
-		C12DE49A2A399F74006FC1E0 /* libavutil.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E882A399EEA006FC1E0 /* libavutil.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE49B2A399F74006FC1E0 /* libdynarmic.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3262A399EFC006FC1E0 /* libdynarmic.xcframework */; };
-		C12DE49C2A399F74006FC1E0 /* libdynarmic.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3262A399EFC006FC1E0 /* libdynarmic.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE49D2A399F74006FC1E0 /* libenet.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32C2A399EFC006FC1E0 /* libenet.xcframework */; };
-		C12DE49E2A399F74006FC1E0 /* libenet.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32C2A399EFC006FC1E0 /* libenet.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE49F2A399F74006FC1E0 /* libfmt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE2412A399EFB006FC1E0 /* libfmt.xcframework */; };
-		C12DE4A02A399F74006FC1E0 /* libfmt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE2412A399EFB006FC1E0 /* libfmt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4A12A399F74006FC1E0 /* libGenericCodeGen.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32D2A399EFC006FC1E0 /* libGenericCodeGen.xcframework */; };
-		C12DE4A22A399F75006FC1E0 /* libGenericCodeGen.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32D2A399EFC006FC1E0 /* libGenericCodeGen.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4A32A399F75006FC1E0 /* libglslang.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3242A399EFC006FC1E0 /* libglslang.xcframework */; };
-		C12DE4A42A399F75006FC1E0 /* libglslang.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3242A399EFC006FC1E0 /* libglslang.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4A52A399F75006FC1E0 /* libHLSL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E862A399EEA006FC1E0 /* libHLSL.xcframework */; };
-		C12DE4A62A399F75006FC1E0 /* libHLSL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E862A399EEA006FC1E0 /* libHLSL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4A72A399F75006FC1E0 /* libMachineIndependent.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3272A399EFC006FC1E0 /* libMachineIndependent.xcframework */; };
-		C12DE4A82A399F75006FC1E0 /* libMachineIndependent.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3272A399EFC006FC1E0 /* libMachineIndependent.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4A92A399F75006FC1E0 /* libmcl.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3282A399EFC006FC1E0 /* libmcl.xcframework */; };
-		C12DE4AA2A399F75006FC1E0 /* libmcl.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3282A399EFC006FC1E0 /* libmcl.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4AB2A399F75006FC1E0 /* libMoltenVK.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3292A399EFC006FC1E0 /* libMoltenVK.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		C12DE4AC2A399F75006FC1E0 /* libOGLCompiler.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3232A399EFC006FC1E0 /* libOGLCompiler.xcframework */; };
-		C12DE4AD2A399F75006FC1E0 /* libOGLCompiler.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3232A399EFC006FC1E0 /* libOGLCompiler.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4AE2A399F75006FC1E0 /* libOSDependent.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E812A399EEA006FC1E0 /* libOSDependent.xcframework */; };
-		C12DE4AF2A399F75006FC1E0 /* libOSDependent.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E812A399EEA006FC1E0 /* libOSDependent.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4B02A399F75006FC1E0 /* libsirit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E802A399EEA006FC1E0 /* libsirit.xcframework */; };
-		C12DE4B12A399F75006FC1E0 /* libsirit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E802A399EEA006FC1E0 /* libsirit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4B22A399F75006FC1E0 /* libSoundTouch.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32F2A399EFC006FC1E0 /* libSoundTouch.xcframework */; };
-		C12DE4B32A399F75006FC1E0 /* libSoundTouch.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32F2A399EFC006FC1E0 /* libSoundTouch.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4B42A399F75006FC1E0 /* libSPIRV.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32E2A399EFC006FC1E0 /* libSPIRV.xcframework */; };
-		C12DE4B52A399F75006FC1E0 /* libSPIRV.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32E2A399EFC006FC1E0 /* libSPIRV.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4B62A399F75006FC1E0 /* libswresample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E822A399EEA006FC1E0 /* libswresample.framework */; };
-		C12DE4B72A399F75006FC1E0 /* libswresample.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E822A399EEA006FC1E0 /* libswresample.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4B82A399F75006FC1E0 /* libswscale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32A2A399EFC006FC1E0 /* libswscale.framework */; };
-		C12DE4B92A399F75006FC1E0 /* libswscale.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32A2A399EFC006FC1E0 /* libswscale.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C12DE4BA2A399F75006FC1E0 /* libteakra.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E872A399EEA006FC1E0 /* libteakra.xcframework */; };
-		C12DE4BB2A399F75006FC1E0 /* libteakra.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E872A399EEA006FC1E0 /* libteakra.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C12DE4BF2A399F7D006FC1E0 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE4BE2A399F7D006FC1E0 /* CoreAudio.framework */; };
 		C12DE4C12A399F83006FC1E0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE4C02A399F83006FC1E0 /* AudioToolbox.framework */; };
 		C12DE4C42A399FF6006FC1E0 /* libzstd in Frameworks */ = {isa = PBXBuildFile; productRef = C12DE4C32A399FF6006FC1E0 /* libzstd */; };
+		C14246602A3EC9D300CA0963 /* Bruno.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142465F2A3EC9D300CA0963 /* Bruno.swift */; };
+		C14246652A3ED53400CA0963 /* emuwindow_apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C14246632A3ED53400CA0963 /* emuwindow_apple.cpp */; };
+		C14246692A3ED59700CA0963 /* ResolutionManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = C14246682A3ED59700CA0963 /* ResolutionManager.mm */; };
+		C142466C2A3ED6C500CA0963 /* emuwindow_vulkan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C142466A2A3ED6C500CA0963 /* emuwindow_vulkan.cpp */; };
+		C142466F2A3EDF9100CA0963 /* configuration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C142466D2A3EDF9100CA0963 /* configuration.cpp */; };
+		C14246712A3EE4B400CA0963 /* EmulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14246702A3EE4B400CA0963 /* EmulationViewController.swift */; };
+		C18717812A4440CC005141B1 /* libdynarmic.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D349E52A41684E00001AB1 /* libdynarmic.xcframework */; };
+		C18717822A4440CC005141B1 /* libdynarmic.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1D349E52A41684E00001AB1 /* libdynarmic.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717832A4440CC005141B1 /* libenet.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32C2A399EFC006FC1E0 /* libenet.xcframework */; };
+		C18717842A4440CC005141B1 /* libenet.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32C2A399EFC006FC1E0 /* libenet.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717852A4440CC005141B1 /* libfmt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE2412A399EFB006FC1E0 /* libfmt.xcframework */; };
+		C18717862A4440CC005141B1 /* libfmt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE2412A399EFB006FC1E0 /* libfmt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717872A4440CC005141B1 /* libGenericCodeGen.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C151384D2A441F8200482904 /* libGenericCodeGen.xcframework */; };
+		C18717882A4440CC005141B1 /* libGenericCodeGen.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C151384D2A441F8200482904 /* libGenericCodeGen.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717892A4440CC005141B1 /* libglslang.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C151384C2A441F8100482904 /* libglslang.xcframework */; };
+		C187178A2A4440CC005141B1 /* libglslang.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C151384C2A441F8100482904 /* libglslang.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C187178B2A4440CC005141B1 /* libHLSL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C151384E2A441F8300482904 /* libHLSL.xcframework */; };
+		C187178C2A4440CC005141B1 /* libHLSL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C151384E2A441F8300482904 /* libHLSL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C187178D2A4440CC005141B1 /* libMachineIndependent.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C151384A2A441F8000482904 /* libMachineIndependent.xcframework */; };
+		C187178E2A4440CC005141B1 /* libMachineIndependent.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C151384A2A441F8000482904 /* libMachineIndependent.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C187178F2A4440CC005141B1 /* libmcl.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3282A399EFC006FC1E0 /* libmcl.xcframework */; };
+		C18717902A4440CC005141B1 /* libmcl.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE3282A399EFC006FC1E0 /* libmcl.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717912A4440CC005141B1 /* libOGLCompiler.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15138562A44290700482904 /* libOGLCompiler.xcframework */; };
+		C18717922A4440CC005141B1 /* libOGLCompiler.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C15138562A44290700482904 /* libOGLCompiler.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717932A4440CC005141B1 /* libOSDependent.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C151384B2A441F8100482904 /* libOSDependent.xcframework */; };
+		C18717942A4440CC005141B1 /* libOSDependent.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C151384B2A441F8100482904 /* libOSDependent.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717952A4440CC005141B1 /* libsirit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E802A399EEA006FC1E0 /* libsirit.xcframework */; };
+		C18717962A4440CC005141B1 /* libsirit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E802A399EEA006FC1E0 /* libsirit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717972A4440CC005141B1 /* libSoundTouch.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32F2A399EFC006FC1E0 /* libSoundTouch.xcframework */; };
+		C18717982A4440CC005141B1 /* libSoundTouch.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32F2A399EFC006FC1E0 /* libSoundTouch.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717992A4440CC005141B1 /* libSPIRV.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15138542A4427AF00482904 /* libSPIRV.xcframework */; };
+		C187179A2A4440CC005141B1 /* libSPIRV.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C15138542A4427AF00482904 /* libSPIRV.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C187179B2A4440CC005141B1 /* libteakra.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E872A399EEA006FC1E0 /* libteakra.xcframework */; };
+		C187179C2A4440CC005141B1 /* libteakra.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E872A399EEA006FC1E0 /* libteakra.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C187179E2A4440D3005141B1 /* libavcodec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32B2A399EFC006FC1E0 /* libavcodec.framework */; };
+		C187179F2A4440D3005141B1 /* libavcodec.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32B2A399EFC006FC1E0 /* libavcodec.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717A02A4440D3005141B1 /* libavformat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E852A399EEA006FC1E0 /* libavformat.framework */; };
+		C18717A12A4440D3005141B1 /* libavformat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E852A399EEA006FC1E0 /* libavformat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717A22A4440D3005141B1 /* libavutil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E882A399EEA006FC1E0 /* libavutil.framework */; };
+		C18717A32A4440D3005141B1 /* libavutil.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E882A399EEA006FC1E0 /* libavutil.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717A42A4440D3005141B1 /* libswresample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E822A399EEA006FC1E0 /* libswresample.framework */; };
+		C18717A52A4440D3005141B1 /* libswresample.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12D9E822A399EEA006FC1E0 /* libswresample.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717A62A4440D3005141B1 /* libswscale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32A2A399EFC006FC1E0 /* libswscale.framework */; };
+		C18717A72A4440D4005141B1 /* libswscale.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C12DE32A2A399EFC006FC1E0 /* libswscale.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18717A82A4441F9005141B1 /* libboost_iostreams.a in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1D349EA2A41696400001AB1 /* libboost_iostreams.a */; };
+		C18717A92A4441F9005141B1 /* libboost_program_options.a in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1D349EB2A41696400001AB1 /* libboost_program_options.a */; };
+		C18717AA2A4441F9005141B1 /* libboost_serialization.a in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1D349E92A41696400001AB1 /* libboost_serialization.a */; };
+		C18717AC2A44420E005141B1 /* libboost_iostreams.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D349EA2A41696400001AB1 /* libboost_iostreams.a */; };
+		C18717AD2A444210005141B1 /* libboost_program_options.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D349EB2A41696400001AB1 /* libboost_program_options.a */; };
+		C18717AE2A444212005141B1 /* libboost_serialization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D349E92A41696400001AB1 /* libboost_serialization.a */; };
 		C193BBC52A3AEFAF00421F30 /* game_info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C193BBC32A3AEFAF00421F30 /* game_info.cpp */; };
 		C193BBC82A3AF82E00421F30 /* ImportedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193BBC72A3AF82E00421F30 /* ImportedItem.swift */; };
 		C193BBCA2A3AF83600421F30 /* InstalledItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193BBC92A3AF83600421F30 /* InstalledItem.swift */; };
+		C19D3C402A417A9100CF9A2A /* InputBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = C19D3C3F2A417A9100CF9A2A /* InputBridge.mm */; };
+		C19D3C432A417ACC00CF9A2A /* InputFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = C19D3C422A417ACC00CF9A2A /* InputFactory.mm */; };
+		C19D3C452A417B0C00CF9A2A /* EmulationInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D3C442A417B0C00CF9A2A /* EmulationInput.swift */; };
+		C19D3C492A4182D900CF9A2A /* ThumbstickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D3C482A4182D900CF9A2A /* ThumbstickView.swift */; };
+		C19D3C4B2A418BC600CF9A2A /* LibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D3C4A2A418BC600CF9A2A /* LibraryManager.swift */; };
 		C19EC4552A39A61A0083BDBA /* OpenSSL in Frameworks */ = {isa = PBXBuildFile; productRef = C19EC4542A39A61A0083BDBA /* OpenSSL */; };
 		C19EC6B62A39AAEB0083BDBA /* md4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C19EC5EC2A39AAEA0083BDBA /* md4.cpp */; };
 		C19EC6B72A39AAEB0083BDBA /* rdtables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C19EC5ED2A39AAEA0083BDBA /* rdtables.cpp */; };
@@ -610,36 +621,56 @@
 		C19EC77F2A39AAEC0083BDBA /* shacal2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C19EC6B52A39AAEB0083BDBA /* shacal2.cpp */; };
 		C19EC7D92A39B15D0083BDBA /* DirectoryManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = C19EC7D82A39B15D0083BDBA /* DirectoryManager.mm */; };
 		C19EC7DD2A39B3570083BDBA /* CitraWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = C19EC7DC2A39B3570083BDBA /* CitraWrapper.mm */; };
+		C1A2A5A92A446A3E00552477 /* libMoltenVK.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A2A5A82A446A3E00552477 /* libMoltenVK.dylib */; };
+		C1A2A5AA2A446AC000552477 /* libMoltenVK.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1A2A5A82A446A3E00552477 /* libMoltenVK.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C1B578522A42BF3000B93F1C /* MetalInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B578512A42BF3000B93F1C /* MetalInputView.swift */; };
+		C1B578572A42EDDF00B93F1C /* TrialOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B578562A42EDDF00B93F1C /* TrialOverView.swift */; };
 		C1C7F4812A3AC4F8005890C1 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7F4802A3AC4F8005890C1 /* LibraryViewController.swift */; };
+		C1D482E02A4ABF250018BB5E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D482DF2A4ABF250018BB5E /* SettingsView.swift */; };
+		C1D482E32A4ABF430018BB5E /* ToggleSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D482E22A4ABF430018BB5E /* ToggleSettingView.swift */; };
+		C1D482E52A4ABF570018BB5E /* StereoRenderSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D482E42A4ABF570018BB5E /* StereoRenderSettingView.swift */; };
+		C1D482E72A4ABF6A0018BB5E /* StepperSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D482E62A4ABF6A0018BB5E /* StepperSettingView.swift */; };
+		C1D482E92A4ABF810018BB5E /* ResolutionFactorSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D482E82A4ABF810018BB5E /* ResolutionFactorSettingView.swift */; };
+		C1D482EB2A4ABF950018BB5E /* LayoutOptionSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D482EA2A4ABF950018BB5E /* LayoutOptionSettingView.swift */; };
+		C1E393802A4AACBD00F043C5 /* VirtualController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E3937F2A4AACBD00F043C5 /* VirtualController.swift */; };
+		C1E550682A4448A000E69211 /* libZycore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E550642A44489A00E69211 /* libZycore.xcframework */; };
+		C1E550692A4448A000E69211 /* libZycore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1E550642A44489A00E69211 /* libZycore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C1E5506A2A4448A200E69211 /* libZydis.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E550652A44489A00E69211 /* libZydis.xcframework */; };
+		C1E5506B2A4448A200E69211 /* libZydis.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1E550652A44489A00E69211 /* libZydis.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C12DE4BC2A399F75006FC1E0 /* Embed Frameworks */ = {
+		C187179D2A4440CD005141B1 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C12DE4B12A399F75006FC1E0 /* libsirit.xcframework in Embed Frameworks */,
-				C12DE49E2A399F74006FC1E0 /* libenet.xcframework in Embed Frameworks */,
-				C12DE4B92A399F75006FC1E0 /* libswscale.framework in Embed Frameworks */,
-				C12DE4A02A399F74006FC1E0 /* libfmt.xcframework in Embed Frameworks */,
-				C12DE4B32A399F75006FC1E0 /* libSoundTouch.xcframework in Embed Frameworks */,
-				C12DE4AB2A399F75006FC1E0 /* libMoltenVK.dylib in Embed Frameworks */,
-				C12DE4A82A399F75006FC1E0 /* libMachineIndependent.xcframework in Embed Frameworks */,
-				C12DE49C2A399F74006FC1E0 /* libdynarmic.xcframework in Embed Frameworks */,
-				C12DE4982A399F74006FC1E0 /* libavformat.framework in Embed Frameworks */,
-				C12DE4A42A399F75006FC1E0 /* libglslang.xcframework in Embed Frameworks */,
-				C12DE4B72A399F75006FC1E0 /* libswresample.framework in Embed Frameworks */,
-				C12DE4BB2A399F75006FC1E0 /* libteakra.xcframework in Embed Frameworks */,
-				C12DE4AF2A399F75006FC1E0 /* libOSDependent.xcframework in Embed Frameworks */,
-				C12DE4962A399F74006FC1E0 /* libavcodec.framework in Embed Frameworks */,
-				C12DE4B52A399F75006FC1E0 /* libSPIRV.xcframework in Embed Frameworks */,
-				C12DE4A22A399F75006FC1E0 /* libGenericCodeGen.xcframework in Embed Frameworks */,
-				C12DE4A62A399F75006FC1E0 /* libHLSL.xcframework in Embed Frameworks */,
-				C12DE4AA2A399F75006FC1E0 /* libmcl.xcframework in Embed Frameworks */,
-				C12DE4AD2A399F75006FC1E0 /* libOGLCompiler.xcframework in Embed Frameworks */,
-				C12DE49A2A399F74006FC1E0 /* libavutil.framework in Embed Frameworks */,
+				C18717A82A4441F9005141B1 /* libboost_iostreams.a in Embed Frameworks */,
+				C1A2A5AA2A446AC000552477 /* libMoltenVK.dylib in Embed Frameworks */,
+				C18717A92A4441F9005141B1 /* libboost_program_options.a in Embed Frameworks */,
+				C18717AA2A4441F9005141B1 /* libboost_serialization.a in Embed Frameworks */,
+				C187179F2A4440D3005141B1 /* libavcodec.framework in Embed Frameworks */,
+				C18717A12A4440D3005141B1 /* libavformat.framework in Embed Frameworks */,
+				C18717A32A4440D3005141B1 /* libavutil.framework in Embed Frameworks */,
+				C18717A52A4440D3005141B1 /* libswresample.framework in Embed Frameworks */,
+				C18717A72A4440D4005141B1 /* libswscale.framework in Embed Frameworks */,
+				C18717882A4440CC005141B1 /* libGenericCodeGen.xcframework in Embed Frameworks */,
+				C187178A2A4440CC005141B1 /* libglslang.xcframework in Embed Frameworks */,
+				C187178C2A4440CC005141B1 /* libHLSL.xcframework in Embed Frameworks */,
+				C187178E2A4440CC005141B1 /* libMachineIndependent.xcframework in Embed Frameworks */,
+				C18717922A4440CC005141B1 /* libOGLCompiler.xcframework in Embed Frameworks */,
+				C18717942A4440CC005141B1 /* libOSDependent.xcframework in Embed Frameworks */,
+				C1E550692A4448A000E69211 /* libZycore.xcframework in Embed Frameworks */,
+				C187179A2A4440CC005141B1 /* libSPIRV.xcframework in Embed Frameworks */,
+				C18717822A4440CC005141B1 /* libdynarmic.xcframework in Embed Frameworks */,
+				C18717842A4440CC005141B1 /* libenet.xcframework in Embed Frameworks */,
+				C18717862A4440CC005141B1 /* libfmt.xcframework in Embed Frameworks */,
+				C18717902A4440CC005141B1 /* libmcl.xcframework in Embed Frameworks */,
+				C18717962A4440CC005141B1 /* libsirit.xcframework in Embed Frameworks */,
+				C18717982A4440CC005141B1 /* libSoundTouch.xcframework in Embed Frameworks */,
+				C187179C2A4440CC005141B1 /* libteakra.xcframework in Embed Frameworks */,
+				C1E5506B2A4448A200E69211 /* libZydis.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,7 +681,6 @@
 		C12D99C22A399EAA006FC1E0 /* emuThreeDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emuThreeDS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C12D99C52A399EAA006FC1E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C12D99C72A399EAA006FC1E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C12D99C92A399EAA006FC1E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C12D99CE2A399EAB006FC1E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C12D99D12A399EAB006FC1E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C12D99D32A399EAB006FC1E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -982,12 +1012,8 @@
 		C12D9D232A399EE5006FC1E0 /* filter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = filter.cpp; sourceTree = "<group>"; };
 		C12D9D272A399EE5006FC1E0 /* settings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = settings.cpp; sourceTree = "<group>"; };
 		C12D9E802A399EEA006FC1E0 /* libsirit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libsirit.xcframework; sourceTree = "<group>"; };
-		C12D9E812A399EEA006FC1E0 /* libOSDependent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libOSDependent.xcframework; sourceTree = "<group>"; };
 		C12D9E822A399EEA006FC1E0 /* libswresample.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libswresample.framework; sourceTree = "<group>"; };
-		C12D9E832A399EEA006FC1E0 /* libboost_iostreams.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_iostreams.a; sourceTree = "<group>"; };
-		C12D9E842A399EEA006FC1E0 /* libboost_program_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_program_options.a; sourceTree = "<group>"; };
 		C12D9E852A399EEA006FC1E0 /* libavformat.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libavformat.framework; sourceTree = "<group>"; };
-		C12D9E862A399EEA006FC1E0 /* libHLSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libHLSL.xcframework; sourceTree = "<group>"; };
 		C12D9E872A399EEA006FC1E0 /* libteakra.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libteakra.xcframework; sourceTree = "<group>"; };
 		C12D9E882A399EEA006FC1E0 /* libavutil.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libavutil.framework; sourceTree = "<group>"; };
 		C12DE2412A399EFB006FC1E0 /* libfmt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libfmt.xcframework; sourceTree = "<group>"; };
@@ -1008,25 +1034,42 @@
 		C12DE3202A399EFC006FC1E0 /* lodepng.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lodepng.cpp; sourceTree = "<group>"; };
 		C12DE3212A399EFC006FC1E0 /* lodepng_fuzzer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lodepng_fuzzer.cpp; sourceTree = "<group>"; };
 		C12DE3222A399EFC006FC1E0 /* pngdetail.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pngdetail.cpp; sourceTree = "<group>"; };
-		C12DE3232A399EFC006FC1E0 /* libOGLCompiler.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libOGLCompiler.xcframework; sourceTree = "<group>"; };
-		C12DE3242A399EFC006FC1E0 /* libglslang.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libglslang.xcframework; sourceTree = "<group>"; };
-		C12DE3262A399EFC006FC1E0 /* libdynarmic.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libdynarmic.xcframework; sourceTree = "<group>"; };
-		C12DE3272A399EFC006FC1E0 /* libMachineIndependent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libMachineIndependent.xcframework; sourceTree = "<group>"; };
 		C12DE3282A399EFC006FC1E0 /* libmcl.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libmcl.xcframework; sourceTree = "<group>"; };
-		C12DE3292A399EFC006FC1E0 /* libMoltenVK.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libMoltenVK.dylib; sourceTree = "<group>"; };
 		C12DE32A2A399EFC006FC1E0 /* libswscale.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libswscale.framework; sourceTree = "<group>"; };
 		C12DE32B2A399EFC006FC1E0 /* libavcodec.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libavcodec.framework; sourceTree = "<group>"; };
 		C12DE32C2A399EFC006FC1E0 /* libenet.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libenet.xcframework; sourceTree = "<group>"; };
-		C12DE32D2A399EFC006FC1E0 /* libGenericCodeGen.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libGenericCodeGen.xcframework; sourceTree = "<group>"; };
-		C12DE32E2A399EFC006FC1E0 /* libSPIRV.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libSPIRV.xcframework; sourceTree = "<group>"; };
 		C12DE32F2A399EFC006FC1E0 /* libSoundTouch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libSoundTouch.xcframework; sourceTree = "<group>"; };
-		C12DE3302A399EFC006FC1E0 /* libboost_serialization.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_serialization.a; sourceTree = "<group>"; };
 		C12DE4BE2A399F7D006FC1E0 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		C12DE4C02A399F83006FC1E0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C142465F2A3EC9D300CA0963 /* Bruno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bruno.swift; sourceTree = "<group>"; };
+		C14246632A3ED53400CA0963 /* emuwindow_apple.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = emuwindow_apple.cpp; sourceTree = "<group>"; };
+		C14246642A3ED53400CA0963 /* emuwindow_apple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emuwindow_apple.h; sourceTree = "<group>"; };
+		C14246672A3ED59700CA0963 /* ResolutionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResolutionManager.h; sourceTree = "<group>"; };
+		C14246682A3ED59700CA0963 /* ResolutionManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResolutionManager.mm; sourceTree = "<group>"; };
+		C142466A2A3ED6C500CA0963 /* emuwindow_vulkan.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = emuwindow_vulkan.cpp; sourceTree = "<group>"; };
+		C142466B2A3ED6C500CA0963 /* emuwindow_vulkan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emuwindow_vulkan.h; sourceTree = "<group>"; };
+		C142466D2A3EDF9100CA0963 /* configuration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = configuration.cpp; sourceTree = "<group>"; };
+		C142466E2A3EDF9100CA0963 /* configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = configuration.h; sourceTree = "<group>"; };
+		C14246702A3EE4B400CA0963 /* EmulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmulationViewController.swift; sourceTree = "<group>"; };
+		C151384A2A441F8000482904 /* libMachineIndependent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libMachineIndependent.xcframework; sourceTree = "<group>"; };
+		C151384B2A441F8100482904 /* libOSDependent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libOSDependent.xcframework; sourceTree = "<group>"; };
+		C151384C2A441F8100482904 /* libglslang.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libglslang.xcframework; sourceTree = "<group>"; };
+		C151384D2A441F8200482904 /* libGenericCodeGen.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libGenericCodeGen.xcframework; sourceTree = "<group>"; };
+		C151384E2A441F8300482904 /* libHLSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libHLSL.xcframework; sourceTree = "<group>"; };
+		C15138542A4427AF00482904 /* libSPIRV.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libSPIRV.xcframework; sourceTree = "<group>"; };
+		C15138562A44290700482904 /* libOGLCompiler.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libOGLCompiler.xcframework; sourceTree = "<group>"; };
 		C193BBC32A3AEFAF00421F30 /* game_info.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game_info.cpp; sourceTree = "<group>"; };
 		C193BBC42A3AEFAF00421F30 /* game_info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game_info.h; sourceTree = "<group>"; };
 		C193BBC72A3AF82E00421F30 /* ImportedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportedItem.swift; sourceTree = "<group>"; };
 		C193BBC92A3AF83600421F30 /* InstalledItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstalledItem.swift; sourceTree = "<group>"; };
+		C19D3C3E2A417A9100CF9A2A /* InputBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputBridge.h; sourceTree = "<group>"; };
+		C19D3C3F2A417A9100CF9A2A /* InputBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = InputBridge.mm; sourceTree = "<group>"; };
+		C19D3C412A417ACC00CF9A2A /* InputFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputFactory.h; sourceTree = "<group>"; };
+		C19D3C422A417ACC00CF9A2A /* InputFactory.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = InputFactory.mm; sourceTree = "<group>"; };
+		C19D3C442A417B0C00CF9A2A /* EmulationInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmulationInput.swift; sourceTree = "<group>"; };
+		C19D3C472A417D0D00CF9A2A /* input_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = input_common.h; sourceTree = "<group>"; };
+		C19D3C482A4182D900CF9A2A /* ThumbstickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbstickView.swift; sourceTree = "<group>"; };
+		C19D3C4A2A418BC600CF9A2A /* LibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryManager.swift; sourceTree = "<group>"; };
 		C19EC5EC2A39AAEA0083BDBA /* md4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = md4.cpp; sourceTree = "<group>"; };
 		C19EC5ED2A39AAEA0083BDBA /* rdtables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rdtables.cpp; sourceTree = "<group>"; };
 		C19EC5EE2A39AAEA0083BDBA /* fips140.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fips140.cpp; sourceTree = "<group>"; };
@@ -1233,8 +1276,25 @@
 		C19EC7D82A39B15D0083BDBA /* DirectoryManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DirectoryManager.mm; sourceTree = "<group>"; };
 		C19EC7DB2A39B3570083BDBA /* CitraWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CitraWrapper.h; sourceTree = "<group>"; };
 		C19EC7DC2A39B3570083BDBA /* CitraWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CitraWrapper.mm; sourceTree = "<group>"; };
+		C1A2A5A82A446A3E00552477 /* libMoltenVK.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libMoltenVK.dylib; sourceTree = "<group>"; };
+		C1B578512A42BF3000B93F1C /* MetalInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalInputView.swift; sourceTree = "<group>"; };
+		C1B578562A42EDDF00B93F1C /* TrialOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOverView.swift; sourceTree = "<group>"; };
+		C1B6E7A12A5A7858007BAECA /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		C1C7F4802A3AC4F8005890C1 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		C1C7F4822A3AC530005890C1 /* emuThreeDS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "emuThreeDS-Bridging-Header.h"; sourceTree = "<group>"; };
+		C1D349E52A41684E00001AB1 /* libdynarmic.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libdynarmic.xcframework; sourceTree = "<group>"; };
+		C1D349E92A41696400001AB1 /* libboost_serialization.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_serialization.a; sourceTree = "<group>"; };
+		C1D349EA2A41696400001AB1 /* libboost_iostreams.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_iostreams.a; sourceTree = "<group>"; };
+		C1D349EB2A41696400001AB1 /* libboost_program_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_program_options.a; sourceTree = "<group>"; };
+		C1D482DF2A4ABF250018BB5E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C1D482E22A4ABF430018BB5E /* ToggleSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSettingView.swift; sourceTree = "<group>"; };
+		C1D482E42A4ABF570018BB5E /* StereoRenderSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StereoRenderSettingView.swift; sourceTree = "<group>"; };
+		C1D482E62A4ABF6A0018BB5E /* StepperSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperSettingView.swift; sourceTree = "<group>"; };
+		C1D482E82A4ABF810018BB5E /* ResolutionFactorSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionFactorSettingView.swift; sourceTree = "<group>"; };
+		C1D482EA2A4ABF950018BB5E /* LayoutOptionSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutOptionSettingView.swift; sourceTree = "<group>"; };
+		C1E3937F2A4AACBD00F043C5 /* VirtualController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualController.swift; sourceTree = "<group>"; };
+		C1E550642A44489A00E69211 /* libZycore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libZycore.xcframework; sourceTree = "<group>"; };
+		C1E550652A44489A00E69211 /* libZydis.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libZydis.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1242,33 +1302,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C12DE4A92A399F75006FC1E0 /* libmcl.xcframework in Frameworks */,
-				C12DE4AC2A399F75006FC1E0 /* libOGLCompiler.xcframework in Frameworks */,
-				C12DE3352A399EFD006FC1E0 /* libboost_program_options.a in Frameworks */,
+				C18717952A4440CC005141B1 /* libsirit.xcframework in Frameworks */,
+				C18717812A4440CC005141B1 /* libdynarmic.xcframework in Frameworks */,
+				C18717832A4440CC005141B1 /* libenet.xcframework in Frameworks */,
+				C18717972A4440CC005141B1 /* libSoundTouch.xcframework in Frameworks */,
+				C18717AC2A44420E005141B1 /* libboost_iostreams.a in Frameworks */,
+				C1E5506A2A4448A200E69211 /* libZydis.xcframework in Frameworks */,
+				C18717AD2A444210005141B1 /* libboost_program_options.a in Frameworks */,
+				C18717AE2A444212005141B1 /* libboost_serialization.a in Frameworks */,
+				C18717892A4440CC005141B1 /* libglslang.xcframework in Frameworks */,
 				C19EC4552A39A61A0083BDBA /* OpenSSL in Frameworks */,
-				C12DE4992A399F74006FC1E0 /* libavutil.framework in Frameworks */,
-				C12DE4A52A399F75006FC1E0 /* libHLSL.xcframework in Frameworks */,
+				C187179E2A4440D3005141B1 /* libavcodec.framework in Frameworks */,
 				C12DE4C42A399FF6006FC1E0 /* libzstd in Frameworks */,
-				C12DE4B42A399F75006FC1E0 /* libSPIRV.xcframework in Frameworks */,
-				C12DE4942A399EFF006FC1E0 /* libboost_serialization.a in Frameworks */,
-				C12DE4B02A399F75006FC1E0 /* libsirit.xcframework in Frameworks */,
-				C12DE4A72A399F75006FC1E0 /* libMachineIndependent.xcframework in Frameworks */,
-				C12DE48D2A399EFF006FC1E0 /* libMoltenVK.dylib in Frameworks */,
-				C12DE4AE2A399F75006FC1E0 /* libOSDependent.xcframework in Frameworks */,
-				C12DE49F2A399F74006FC1E0 /* libfmt.xcframework in Frameworks */,
+				C187178D2A4440CC005141B1 /* libMachineIndependent.xcframework in Frameworks */,
+				C18717A42A4440D3005141B1 /* libswresample.framework in Frameworks */,
 				C12DE4C12A399F83006FC1E0 /* AudioToolbox.framework in Frameworks */,
-				C12DE4A12A399F74006FC1E0 /* libGenericCodeGen.xcframework in Frameworks */,
-				C12DE4B62A399F75006FC1E0 /* libswresample.framework in Frameworks */,
-				C12DE4972A399F74006FC1E0 /* libavformat.framework in Frameworks */,
-				C12DE4B82A399F75006FC1E0 /* libswscale.framework in Frameworks */,
-				C12DE4BA2A399F75006FC1E0 /* libteakra.xcframework in Frameworks */,
-				C12DE49D2A399F74006FC1E0 /* libenet.xcframework in Frameworks */,
+				C187179B2A4440CC005141B1 /* libteakra.xcframework in Frameworks */,
+				C18717932A4440CC005141B1 /* libOSDependent.xcframework in Frameworks */,
+				C187178B2A4440CC005141B1 /* libHLSL.xcframework in Frameworks */,
+				C18717992A4440CC005141B1 /* libSPIRV.xcframework in Frameworks */,
+				C1E550682A4448A000E69211 /* libZycore.xcframework in Frameworks */,
+				C1A2A5A92A446A3E00552477 /* libMoltenVK.dylib in Frameworks */,
+				C18717A22A4440D3005141B1 /* libavutil.framework in Frameworks */,
+				C18717A62A4440D3005141B1 /* libswscale.framework in Frameworks */,
+				C187178F2A4440CC005141B1 /* libmcl.xcframework in Frameworks */,
+				C18717872A4440CC005141B1 /* libGenericCodeGen.xcframework in Frameworks */,
+				C18717A02A4440D3005141B1 /* libavformat.framework in Frameworks */,
 				C12DE4BF2A399F7D006FC1E0 /* CoreAudio.framework in Frameworks */,
-				C12DE4B22A399F75006FC1E0 /* libSoundTouch.xcframework in Frameworks */,
-				C12DE3342A399EFD006FC1E0 /* libboost_iostreams.a in Frameworks */,
-				C12DE4A32A399F75006FC1E0 /* libglslang.xcframework in Frameworks */,
-				C12DE4952A399F74006FC1E0 /* libavcodec.framework in Frameworks */,
-				C12DE49B2A399F74006FC1E0 /* libdynarmic.xcframework in Frameworks */,
+				C18717912A4440CC005141B1 /* libOGLCompiler.xcframework in Frameworks */,
+				C18717852A4440CC005141B1 /* libfmt.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1279,6 +1341,7 @@
 			isa = PBXGroup;
 			children = (
 				C12D99C42A399EAA006FC1E0 /* emuThreeDS */,
+				C1B6E7A02A5A7858007BAECA /* Packages */,
 				C12D99C32A399EAA006FC1E0 /* Products */,
 				C12DE4BD2A399F7D006FC1E0 /* Frameworks */,
 			);
@@ -1299,9 +1362,9 @@
 				C19EC7D22A39B0F40083BDBA /* C++ */,
 				C19EC7D32A39B1090083BDBA /* Objective-C */,
 				C19EC7D42A39B1150083BDBA /* Swift */,
+				C1D482DE2A4ABF120018BB5E /* SwiftUI */,
 				C12D99C52A399EAA006FC1E0 /* AppDelegate.swift */,
 				C12D99C72A399EAA006FC1E0 /* SceneDelegate.swift */,
-				C12D99C92A399EAA006FC1E0 /* ViewController.swift */,
 				C12D99CE2A399EAB006FC1E0 /* Assets.xcassets */,
 				C12D99D02A399EAB006FC1E0 /* LaunchScreen.storyboard */,
 				C12D99D32A399EAB006FC1E0 /* Info.plist */,
@@ -1314,6 +1377,7 @@
 			children = (
 				C12D99DA2A399EE4006FC1E0 /* audio_core */,
 				C12D9A082A399EE4006FC1E0 /* core */,
+				C19D3C462A417CFC00CF9A2A /* input_common */,
 				C12D9C1D2A399EE5006FC1E0 /* network */,
 				C12D9C2D2A399EE5006FC1E0 /* video_core */,
 				C12D9CD32A399EE5006FC1E0 /* common */,
@@ -2214,29 +2278,31 @@
 		C12D9E7F2A399EEA006FC1E0 /* externals */ = {
 			isa = PBXGroup;
 			children = (
+				C1D349EA2A41696400001AB1 /* libboost_iostreams.a */,
+				C1D349EB2A41696400001AB1 /* libboost_program_options.a */,
+				C1D349E92A41696400001AB1 /* libboost_serialization.a */,
 				C12DE32B2A399EFC006FC1E0 /* libavcodec.framework */,
 				C12D9E852A399EEA006FC1E0 /* libavformat.framework */,
 				C12D9E882A399EEA006FC1E0 /* libavutil.framework */,
 				C12D9E822A399EEA006FC1E0 /* libswresample.framework */,
 				C12DE32A2A399EFC006FC1E0 /* libswscale.framework */,
-				C12DE3292A399EFC006FC1E0 /* libMoltenVK.dylib */,
-				C12DE3262A399EFC006FC1E0 /* libdynarmic.xcframework */,
+				C1A2A5A82A446A3E00552477 /* libMoltenVK.dylib */,
+				C151384D2A441F8200482904 /* libGenericCodeGen.xcframework */,
+				C151384C2A441F8100482904 /* libglslang.xcframework */,
+				C151384E2A441F8300482904 /* libHLSL.xcframework */,
+				C151384A2A441F8000482904 /* libMachineIndependent.xcframework */,
+				C15138562A44290700482904 /* libOGLCompiler.xcframework */,
+				C151384B2A441F8100482904 /* libOSDependent.xcframework */,
+				C15138542A4427AF00482904 /* libSPIRV.xcframework */,
+				C1D349E52A41684E00001AB1 /* libdynarmic.xcframework */,
 				C12DE32C2A399EFC006FC1E0 /* libenet.xcframework */,
 				C12DE2412A399EFB006FC1E0 /* libfmt.xcframework */,
-				C12DE32D2A399EFC006FC1E0 /* libGenericCodeGen.xcframework */,
-				C12DE3242A399EFC006FC1E0 /* libglslang.xcframework */,
-				C12D9E862A399EEA006FC1E0 /* libHLSL.xcframework */,
-				C12DE3272A399EFC006FC1E0 /* libMachineIndependent.xcframework */,
 				C12DE3282A399EFC006FC1E0 /* libmcl.xcframework */,
-				C12DE3232A399EFC006FC1E0 /* libOGLCompiler.xcframework */,
-				C12D9E812A399EEA006FC1E0 /* libOSDependent.xcframework */,
 				C12D9E802A399EEA006FC1E0 /* libsirit.xcframework */,
 				C12DE32F2A399EFC006FC1E0 /* libSoundTouch.xcframework */,
-				C12DE32E2A399EFC006FC1E0 /* libSPIRV.xcframework */,
 				C12D9E872A399EEA006FC1E0 /* libteakra.xcframework */,
-				C12D9E832A399EEA006FC1E0 /* libboost_iostreams.a */,
-				C12D9E842A399EEA006FC1E0 /* libboost_program_options.a */,
-				C12DE3302A399EFC006FC1E0 /* libboost_serialization.a */,
+				C1E550642A44489A00E69211 /* libZycore.xcframework */,
+				C1E550652A44489A00E69211 /* libZydis.xcframework */,
 				C12DE2422A399EFB006FC1E0 /* source */,
 			);
 			path = externals;
@@ -2308,11 +2374,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C14246662A3ED57E00CA0963 /* Resolution Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C14246672A3ED59700CA0963 /* ResolutionManager.h */,
+				C14246682A3ED59700CA0963 /* ResolutionManager.mm */,
+			);
+			path = "Resolution Manager";
+			sourceTree = "<group>";
+		};
 		C193BBC22A3AEFA000421F30 /* Citra Wrapper */ = {
 			isa = PBXGroup;
 			children = (
-				C193BBC32A3AEFAF00421F30 /* game_info.cpp */,
+				C142466E2A3EDF9100CA0963 /* configuration.h */,
+				C142466D2A3EDF9100CA0963 /* configuration.cpp */,
+				C14246642A3ED53400CA0963 /* emuwindow_apple.h */,
+				C14246632A3ED53400CA0963 /* emuwindow_apple.cpp */,
+				C142466B2A3ED6C500CA0963 /* emuwindow_vulkan.h */,
+				C142466A2A3ED6C500CA0963 /* emuwindow_vulkan.cpp */,
 				C193BBC42A3AEFAF00421F30 /* game_info.h */,
+				C193BBC32A3AEFAF00421F30 /* game_info.cpp */,
 			);
 			path = "Citra Wrapper";
 			sourceTree = "<group>";
@@ -2320,10 +2401,23 @@
 		C193BBC62A3AF82200421F30 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C19D3C442A417B0C00CF9A2A /* EmulationInput.swift */,
 				C193BBC72A3AF82E00421F30 /* ImportedItem.swift */,
 				C193BBC92A3AF83600421F30 /* InstalledItem.swift */,
+				C19D3C4A2A418BC600CF9A2A /* LibraryManager.swift */,
+				C1B578512A42BF3000B93F1C /* MetalInputView.swift */,
+				C19D3C482A4182D900CF9A2A /* ThumbstickView.swift */,
+				C1E3937F2A4AACBD00F043C5 /* VirtualController.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		C19D3C462A417CFC00CF9A2A /* input_common */ = {
+			isa = PBXGroup;
+			children = (
+				C19D3C472A417D0D00CF9A2A /* input_common.h */,
+			);
+			path = input_common;
 			sourceTree = "<group>";
 		};
 		C19EC5EB2A39AAEA0083BDBA /* cryptopp */ = {
@@ -2558,6 +2652,7 @@
 			children = (
 				C193BBC62A3AF82200421F30 /* Classes */,
 				C1C7F47F2A3AC4EA005890C1 /* Controllers */,
+				C142465F2A3EC9D300CA0963 /* Bruno.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -2576,6 +2671,7 @@
 			children = (
 				C19EC7DA2A39B3480083BDBA /* Citra Wrapper */,
 				C19EC7D52A39B1410083BDBA /* Directory Manager */,
+				C14246662A3ED57E00CA0963 /* Resolution Manager */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -2585,16 +2681,51 @@
 			children = (
 				C19EC7DB2A39B3570083BDBA /* CitraWrapper.h */,
 				C19EC7DC2A39B3570083BDBA /* CitraWrapper.mm */,
+				C19D3C3E2A417A9100CF9A2A /* InputBridge.h */,
+				C19D3C3F2A417A9100CF9A2A /* InputBridge.mm */,
+				C19D3C412A417ACC00CF9A2A /* InputFactory.h */,
+				C19D3C422A417ACC00CF9A2A /* InputFactory.mm */,
 			);
 			path = "Citra Wrapper";
+			sourceTree = "<group>";
+		};
+		C1B6E7A02A5A7858007BAECA /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C1B6E7A12A5A7858007BAECA /* RealityKitContent */,
+			);
+			path = Packages;
 			sourceTree = "<group>";
 		};
 		C1C7F47F2A3AC4EA005890C1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C14246702A3EE4B400CA0963 /* EmulationViewController.swift */,
 				C1C7F4802A3AC4F8005890C1 /* LibraryViewController.swift */,
+				C1B578562A42EDDF00B93F1C /* TrialOverView.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C1D482DE2A4ABF120018BB5E /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				C1D482E12A4ABF380018BB5E /* Views */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		C1D482E12A4ABF380018BB5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1D482EA2A4ABF950018BB5E /* LayoutOptionSettingView.swift */,
+				C1D482E82A4ABF810018BB5E /* ResolutionFactorSettingView.swift */,
+				C1D482DF2A4ABF250018BB5E /* SettingsView.swift */,
+				C1D482E62A4ABF6A0018BB5E /* StepperSettingView.swift */,
+				C1D482E42A4ABF570018BB5E /* StereoRenderSettingView.swift */,
+				C1D482E22A4ABF430018BB5E /* ToggleSettingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2607,7 +2738,7 @@
 				C12D99BE2A399EAA006FC1E0 /* Sources */,
 				C12D99BF2A399EAA006FC1E0 /* Frameworks */,
 				C12D99C02A399EAA006FC1E0 /* Resources */,
-				C12DE4BC2A399F75006FC1E0 /* Embed Frameworks */,
+				C187179D2A4440CD005141B1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2712,6 +2843,7 @@
 				C19EC75D2A39AAEC0083BDBA /* keccak.cpp in Sources */,
 				C12D9E4C2A399EE5006FC1E0 /* gl_shader_decompiler.cpp in Sources */,
 				C12D9E262A399EE5006FC1E0 /* rpc_server.cpp in Sources */,
+				C14246602A3EC9D300CA0963 /* Bruno.swift in Sources */,
 				C12D9E0A2A399EE5006FC1E0 /* core_timing.cpp in Sources */,
 				C19EC71A2A39AAEC0083BDBA /* validat1.cpp in Sources */,
 				C12D9E102A399EE5006FC1E0 /* elf.cpp in Sources */,
@@ -2769,12 +2901,14 @@
 				C12D9E382A399EE5006FC1E0 /* vk_rasterizer.cpp in Sources */,
 				C19EC7642A39AAEC0083BDBA /* 3way.cpp in Sources */,
 				C12D9E6E2A399EE6006FC1E0 /* error.cpp in Sources */,
+				C1B578522A42BF3000B93F1C /* MetalInputView.swift in Sources */,
 				C12D9E002A399EE5006FC1E0 /* archive_sdmcwriteonly.cpp in Sources */,
 				C12D9E342A399EE5006FC1E0 /* vk_present_window.cpp in Sources */,
 				C12D9E312A399EE5006FC1E0 /* packet.cpp in Sources */,
 				C19EC6D52A39AAEB0083BDBA /* tea.cpp in Sources */,
 				C12D9E302A399EE5006FC1E0 /* room_member.cpp in Sources */,
 				C12D9DCB2A399EE5006FC1E0 /* client_session.cpp in Sources */,
+				C1B578572A42EDDF00B93F1C /* TrialOverView.swift in Sources */,
 				C12D9DC32A399EE5006FC1E0 /* archive.cpp in Sources */,
 				C12D9E062A399EE5006FC1E0 /* romfs_reader.cpp in Sources */,
 				C12D9D4A2A399EE5006FC1E0 /* lcd.cpp in Sources */,
@@ -2794,6 +2928,7 @@
 				C19EC6DC2A39AAEC0083BDBA /* camellia.cpp in Sources */,
 				C12D9D3F2A399EE5006FC1E0 /* lle.cpp in Sources */,
 				C19EC6FA2A39AAEC0083BDBA /* validat6.cpp in Sources */,
+				C19D3C4B2A418BC600CF9A2A /* LibraryManager.swift in Sources */,
 				C12D9D7A2A399EE5006FC1E0 /* ir.cpp in Sources */,
 				C19EC70F2A39AAEC0083BDBA /* elgamal.cpp in Sources */,
 				C12D9E1B2A399EE5006FC1E0 /* arm_dyncom_interpreter.cpp in Sources */,
@@ -2818,6 +2953,7 @@
 				C12D9E162A399EE5006FC1E0 /* arm_exclusive_monitor.cpp in Sources */,
 				C19EC6C22A39AAEB0083BDBA /* crc.cpp in Sources */,
 				C12D9D8C2A399EE5006FC1E0 /* cfg_i.cpp in Sources */,
+				C1D482E52A4ABF570018BB5E /* StereoRenderSettingView.swift in Sources */,
 				C12D9D6D2A399EE5006FC1E0 /* nim_u.cpp in Sources */,
 				C12D9DAD2A399EE5006FC1E0 /* applet_manager.cpp in Sources */,
 				C19EC6CA2A39AAEB0083BDBA /* marss.cpp in Sources */,
@@ -2836,6 +2972,7 @@
 				C12D9DDB2A399EE5006FC1E0 /* hle_ipc.cpp in Sources */,
 				C12D9E182A399EE5006FC1E0 /* arm_dyncom.cpp in Sources */,
 				C19EC7782A39AAEC0083BDBA /* ppc_power9.cpp in Sources */,
+				C19D3C452A417B0C00CF9A2A /* EmulationInput.swift in Sources */,
 				C12D9DD32A399EE5006FC1E0 /* shared_memory.cpp in Sources */,
 				C19EC6BD2A39AAEB0083BDBA /* skipjack.cpp in Sources */,
 				C19EC7332A39AAEC0083BDBA /* pch.cpp in Sources */,
@@ -2866,6 +3003,7 @@
 				C19EC6DA2A39AAEC0083BDBA /* cham_simd.cpp in Sources */,
 				C12D9D472A399EE5006FC1E0 /* sink_details.cpp in Sources */,
 				C12D9DF32A399EE5006FC1E0 /* savedata_archive.cpp in Sources */,
+				C1D482EB2A4ABF950018BB5E /* LayoutOptionSettingView.swift in Sources */,
 				C12D9D3A2A399EE5006FC1E0 /* mixers.cpp in Sources */,
 				C12D9E372A399EE5006FC1E0 /* renderer_vulkan.cpp in Sources */,
 				C12D9D9A2A399EE5006FC1E0 /* nwm_ext.cpp in Sources */,
@@ -2894,6 +3032,7 @@
 				C12D9DE82A399EE5006FC1E0 /* swkbd.cpp in Sources */,
 				C19EC6D42A39AAEB0083BDBA /* pubkey.cpp in Sources */,
 				C12D9D782A399EE5006FC1E0 /* ndm_u.cpp in Sources */,
+				C1D482E02A4ABF250018BB5E /* SettingsView.swift in Sources */,
 				C19EC7202A39AAEC0083BDBA /* padlkrng.cpp in Sources */,
 				C19EC7702A39AAEC0083BDBA /* nbtheory.cpp in Sources */,
 				C19EC6CC2A39AAEB0083BDBA /* dessp.cpp in Sources */,
@@ -2965,6 +3104,7 @@
 				C12D9D9B2A399EE5006FC1E0 /* nwm_uds.cpp in Sources */,
 				C19EC7772A39AAEC0083BDBA /* aria_simd.cpp in Sources */,
 				C12D9E602A399EE6006FC1E0 /* etc1.cpp in Sources */,
+				C14246712A3EE4B400CA0963 /* EmulationViewController.swift in Sources */,
 				C12D9E0F2A399EE5006FC1E0 /* smdh.cpp in Sources */,
 				C12D9DCC2A399EE5006FC1E0 /* svc.cpp in Sources */,
 				C12D9E0D2A399EE5006FC1E0 /* cheat_base.cpp in Sources */,
@@ -2981,6 +3121,7 @@
 				C12D9D3C2A399EE5006FC1E0 /* ffmpeg_dl.cpp in Sources */,
 				C19EC7002A39AAEC0083BDBA /* mqueue.cpp in Sources */,
 				C12D9E012A399EE5006FC1E0 /* archive_source_sd_savedata.cpp in Sources */,
+				C19D3C432A417ACC00CF9A2A /* InputFactory.mm in Sources */,
 				C12D9E592A399EE6006FC1E0 /* sw_lighting.cpp in Sources */,
 				C19EC6CF2A39AAEB0083BDBA /* xtrcrypt.cpp in Sources */,
 				C19EC6C02A39AAEB0083BDBA /* md5.cpp in Sources */,
@@ -3022,6 +3163,7 @@
 				C12D9DDF2A399EE5006FC1E0 /* wait_object.cpp in Sources */,
 				C19EC7612A39AAEC0083BDBA /* asn.cpp in Sources */,
 				C19EC7382A39AAEC0083BDBA /* dh2.cpp in Sources */,
+				C19D3C492A4182D900CF9A2A /* ThumbstickView.swift in Sources */,
 				C12D9E172A399EE5006FC1E0 /* arm_dynarmic_cp15.cpp in Sources */,
 				C12D9DE62A399EE5006FC1E0 /* mii_selector.cpp in Sources */,
 				C12D9D712A399EE5006FC1E0 /* am_app.cpp in Sources */,
@@ -3034,7 +3176,6 @@
 				C12D9D652A399EE5006FC1E0 /* ptm_play.cpp in Sources */,
 				C12DE47D2A399EFE006FC1E0 /* compare.cpp in Sources */,
 				C19EC7422A39AAEC0083BDBA /* rijndael.cpp in Sources */,
-				C12D99CA2A399EAA006FC1E0 /* ViewController.swift in Sources */,
 				C12D9E1F2A399EE5006FC1E0 /* vfpinstr.cpp in Sources */,
 				C12D9D822A399EE5006FC1E0 /* boss_p.cpp in Sources */,
 				C19EC7222A39AAEC0083BDBA /* poly1305.cpp in Sources */,
@@ -3096,6 +3237,7 @@
 				C19EC7342A39AAEC0083BDBA /* hc128.cpp in Sources */,
 				C19EC6CD2A39AAEB0083BDBA /* eprecomp.cpp in Sources */,
 				C12D9D8D2A399EE5006FC1E0 /* ssl_c.cpp in Sources */,
+				C1D482E92A4ABF810018BB5E /* ResolutionFactorSettingView.swift in Sources */,
 				C12D9E782A399EE6006FC1E0 /* memory_ref.cpp in Sources */,
 				C12D9D3E2A399EE5006FC1E0 /* hle.cpp in Sources */,
 				C19EC77F2A39AAEC0083BDBA /* shacal2.cpp in Sources */,
@@ -3106,8 +3248,10 @@
 				C12D9D582A399EE5006FC1E0 /* pm_app.cpp in Sources */,
 				C12D9DFC2A399EE5006FC1E0 /* layered_fs.cpp in Sources */,
 				C12D9DB72A399EE5006FC1E0 /* gsp_lcd.cpp in Sources */,
+				C1D482E72A4ABF6A0018BB5E /* StepperSettingView.swift in Sources */,
 				C19EC70D2A39AAEC0083BDBA /* validat2.cpp in Sources */,
 				C12D9DA02A399EE5006FC1E0 /* cam_q.cpp in Sources */,
+				C142466C2A3ED6C500CA0963 /* emuwindow_vulkan.cpp in Sources */,
 				C19EC7762A39AAEC0083BDBA /* rsa.cpp in Sources */,
 				C12D9E352A399EE5006FC1E0 /* vk_swapchain.cpp in Sources */,
 				C19EC6E82A39AAEC0083BDBA /* validat5.cpp in Sources */,
@@ -3152,15 +3296,18 @@
 				C12DE47B2A399EFE006FC1E0 /* assembler.cpp in Sources */,
 				C19EC72D2A39AAEC0083BDBA /* allocate.cpp in Sources */,
 				C12D9E672A399EE6006FC1E0 /* custom_tex_manager.cpp in Sources */,
+				C14246652A3ED53400CA0963 /* emuwindow_apple.cpp in Sources */,
 				C19EC7D92A39B15D0083BDBA /* DirectoryManager.mm in Sources */,
 				C12D9DE22A399EE5006FC1E0 /* semaphore.cpp in Sources */,
 				C12D9DA82A399EE5006FC1E0 /* news_s.cpp in Sources */,
 				C19EC7292A39AAEC0083BDBA /* hight.cpp in Sources */,
 				C12DE47C2A399EFE006FC1E0 /* common.cpp in Sources */,
+				C1D482E32A4ABF430018BB5E /* ToggleSettingView.swift in Sources */,
 				C19EC7602A39AAEC0083BDBA /* kalyna.cpp in Sources */,
 				C12D9E5E2A399EE6006FC1E0 /* sw_texturing.cpp in Sources */,
 				C12D9D4E2A399EE5006FC1E0 /* gpu.cpp in Sources */,
 				C12D9D692A399EE5006FC1E0 /* ac_i.cpp in Sources */,
+				C14246692A3ED59700CA0963 /* ResolutionManager.mm in Sources */,
 				C12D9DFA2A399EE5006FC1E0 /* delay_generator.cpp in Sources */,
 				C12D9D932A399EE5006FC1E0 /* nwm_tst.cpp in Sources */,
 				C19EC6E42A39AAEC0083BDBA /* rdrand.cpp in Sources */,
@@ -3183,6 +3330,7 @@
 				C12D9D7F2A399EE5006FC1E0 /* soc_u.cpp in Sources */,
 				C12D9DEE2A399EE5006FC1E0 /* core.cpp in Sources */,
 				C12D9D562A399EE5006FC1E0 /* applet.cpp in Sources */,
+				C1E393802A4AACBD00F043C5 /* VirtualController.swift in Sources */,
 				C12D9D7B2A399EE5006FC1E0 /* ir_rst.cpp in Sources */,
 				C12D9D452A399EE5006FC1E0 /* dsp_interface.cpp in Sources */,
 				C12D9D702A399EE5006FC1E0 /* am_net.cpp in Sources */,
@@ -3194,6 +3342,7 @@
 				C19EC7522A39AAEC0083BDBA /* wake.cpp in Sources */,
 				C12D9D742A399EE5006FC1E0 /* pxi.cpp in Sources */,
 				C12D9DEF2A399EE5006FC1E0 /* system_titles.cpp in Sources */,
+				C142466F2A3EDF9100CA0963 /* configuration.cpp in Sources */,
 				C12D9DA62A399EE5006FC1E0 /* news_u.cpp in Sources */,
 				C19EC7262A39AAEC0083BDBA /* ariatab.cpp in Sources */,
 				C19EC7162A39AAEC0083BDBA /* gzip.cpp in Sources */,
@@ -3213,6 +3362,7 @@
 				C12D9DBD2A399EE5006FC1E0 /* hid_spvr.cpp in Sources */,
 				C12D9E0E2A399EE5006FC1E0 /* ncch.cpp in Sources */,
 				C12DE4792A399EFE006FC1E0 /* preprocessor.cpp in Sources */,
+				C19D3C402A417A9100CF9A2A /* InputBridge.mm in Sources */,
 				C19EC6D72A39AAEB0083BDBA /* serpent.cpp in Sources */,
 				C19EC7252A39AAEC0083BDBA /* bfinit.cpp in Sources */,
 				C12D9DD22A399EE5006FC1E0 /* kernel.cpp in Sources */,
@@ -3370,15 +3520,19 @@
 		C12D99D72A399EAB006FC1E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = LightAppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = Z3ZEABYY6P;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = x86_64;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/emuThreeDS/externals",
+					"\"$(PROJECT_DIR)/emuThreeDS/externals\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -3393,11 +3547,12 @@
 					"\"$(SRCROOT)/emuThreeDS/externals/include\"",
 				);
 				INFOPLIST_FILE = emuThreeDS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = emuThreeDS;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3405,20 +3560,27 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/emuThreeDS/externals",
+					"\"$(PROJECT_DIR)/emuThreeDS/externals\"",
 				);
 				MARKETING_VERSION = 1.0.6.5;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lboost_serialization",
+					"-lboost_iostreams",
+					"-lboost_program_options",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.antique.emuThreeDS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/antique/Documents/Xcode/Projects/emuThreeDS/emuThreeDS/Objective-C/emuThreeDS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/emuThreeDS/Objective-C/emuThreeDS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/emuThreeDS/externals/include\"",
 					"\"$(HOME)/VulkanSDK/1.3.250.0/MoltenVK/include\"",
+					/usr/local/include,
 				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -3427,15 +3589,19 @@
 		C12D99D82A399EAB006FC1E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = LightAppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = Z3ZEABYY6P;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = x86_64;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/emuThreeDS/externals",
+					"\"$(PROJECT_DIR)/emuThreeDS/externals\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_PREPROCESSOR_DEFINITIONS = CRYPTOPP_DISABLE_ASM;
@@ -3446,11 +3612,12 @@
 					"\"$(SRCROOT)/emuThreeDS/externals/include\"",
 				);
 				INFOPLIST_FILE = emuThreeDS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = emuThreeDS;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3458,20 +3625,27 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/emuThreeDS/externals",
+					"\"$(PROJECT_DIR)/emuThreeDS/externals\"",
 				);
 				MARKETING_VERSION = 1.0.6.5;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lboost_serialization",
+					"-lboost_iostreams",
+					"-lboost_program_options",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.antique.emuThreeDS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/antique/Documents/Xcode/Projects/emuThreeDS/emuThreeDS/Objective-C/emuThreeDS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/emuThreeDS/Objective-C/emuThreeDS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/emuThreeDS/externals/include\"",
 					"\"$(HOME)/VulkanSDK/1.3.250.0/MoltenVK/include\"",
+					/usr/local/include,
 				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

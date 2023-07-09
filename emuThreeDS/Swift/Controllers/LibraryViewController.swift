@@ -32,10 +32,7 @@ class LibraryViewController : UICollectionViewController, ImportingProgressDeleg
         view.backgroundColor = .systemBackground
         
         
-        citraWrapper.delegate = self
         prepareAndDisplayLibrary()
-        
-        
         NotificationCenter.default.addObserver(self, selector: #selector(importingProgressDidFinish(notification:)), name: Notification.Name("importingProgressDidFinish"), object: nil)
     }
     
@@ -45,7 +42,7 @@ class LibraryViewController : UICollectionViewController, ImportingProgressDeleg
             return
         }
         
-        snapshot.appendItems([ImportedItem(gameInfo: self.getImportedItemGameInformation(for: fileURL.path))], toSection: "Imported")
+        snapshot.appendItems([ImportedItem(gameInfo: LibraryManager.shared.getImportedItemGameInformation(for: fileURL.path))], toSection: "Imported")
         if #available(iOS 15, *) {
             Task {
                 await dataSource.apply(snapshot)
@@ -81,7 +78,7 @@ class LibraryViewController : UICollectionViewController, ImportingProgressDeleg
     }
     
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
-        citraWrapper.importCIAs(urls)
+        citraWrapper.importCIAs(urls: urls)
     }
 }
 
@@ -89,45 +86,44 @@ class LibraryViewController : UICollectionViewController, ImportingProgressDeleg
 
 // MARK: LibraryViewControllerExtension
 extension LibraryViewController {
-    func getImportedItemGameInformation(for path: String) -> (String, String, String, String) {
-        let formatter = ByteCountFormatter()
-        formatter.allowedUnits = [.useGB, .useMB, .useKB]
-        formatter.countStyle = .file
-        
-        var size: Int64 = 0
-        do {
-            size = try FileManager.default.attributesOfItem(atPath: path)[.size] as? Int64 ?? 0
-        } catch { print(error.localizedDescription) }
-        
-        
-        return (citraWrapper.getPublisher(path), citraWrapper.getRegion(path), formatter.string(fromByteCount: size), citraWrapper.getTitle(path))
-    }
-    
-    
     func prepareAndDisplayLibrary() {
         let importedItemCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, ImportedItem> { cell, indexPath, itemIdentifier in
             var contentConfiguration = UIListContentConfiguration.subtitleCell()
+            contentConfiguration.image = itemIdentifier.getIcon(for: itemIdentifier.path)
+            contentConfiguration.imageProperties.maximumSize = .init(width: 40, height: 40)
+            contentConfiguration.imageProperties.cornerRadius = 8
+            
             contentConfiguration.text = itemIdentifier.title
-            contentConfiguration.textProperties.font = UIFont.preferredFont(forTextStyle: .headline)
+            contentConfiguration.textProperties.color = .label
+            contentConfiguration.textProperties.numberOfLines = 1
+            
             contentConfiguration.secondaryText = "\(itemIdentifier.region), \(itemIdentifier.publisher)"
             contentConfiguration.secondaryTextProperties.color = .secondaryLabel
+            contentConfiguration.secondaryTextProperties.numberOfLines = 1
             cell.contentConfiguration = contentConfiguration
             
             cell.accessories = [
-                UICellAccessory.label(text: itemIdentifier.size, options: .init(tintColor: .systemGreen))
+                UICellAccessory.label(text: itemIdentifier.size, options: .init(tintColor: .systemBlue))
             ]
         }
         
         let installedItemCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, InstalledItem> { cell, indexPath, itemIdentifier in
             var contentConfiguration = UIListContentConfiguration.subtitleCell()
+            contentConfiguration.image = itemIdentifier.getIcon(for: itemIdentifier.path)
+            contentConfiguration.imageProperties.maximumSize = .init(width: 40, height: 40)
+            contentConfiguration.imageProperties.cornerRadius = 8
+            
             contentConfiguration.text = itemIdentifier.title
-            contentConfiguration.textProperties.font = UIFont.preferredFont(forTextStyle: .headline)
+            contentConfiguration.textProperties.color = .label
+            contentConfiguration.textProperties.numberOfLines = 1
+            
             contentConfiguration.secondaryText = "\(itemIdentifier.region), \(itemIdentifier.publisher)"
             contentConfiguration.secondaryTextProperties.color = .secondaryLabel
+            contentConfiguration.secondaryTextProperties.numberOfLines = 1
             cell.contentConfiguration = contentConfiguration
             
             cell.accessories = [
-                UICellAccessory.label(text: itemIdentifier.size, options: .init(tintColor: .systemGreen))
+                UICellAccessory.label(text: itemIdentifier.size, options: .init(tintColor: .systemBlue))
             ]
         }
         
@@ -163,14 +159,70 @@ extension LibraryViewController {
         snapshot = NSDiffableDataSourceSnapshot()
         snapshot.appendSections(["Imported", "Installed"])
         snapshot.appendItems(citraWrapper.importedCIAs().reduce(into: [ImportedItem](), { partialResult, filePath in
-            partialResult.append(ImportedItem(gameInfo: self.getImportedItemGameInformation(for: filePath)))
+            partialResult.append(ImportedItem(gameInfo: LibraryManager.shared.getImportedItemGameInformation(for: filePath)))
         }), toSection: "Imported")
+        snapshot.appendItems(LibraryManager.shared.getLibrary(), toSection: "Installed")
         if #available(iOS 15, *) {
             Task {
                 await dataSource.apply(snapshot)
             }
         } else {
             dataSource.apply(snapshot)
+        }
+    }
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemsAt indexPaths: [IndexPath], point: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(actionProvider:  { elements in
+            UIMenu(children: [
+                UIMenu(title: "Cheats", image: UIImage(systemName: "doc"), children: [
+                    UIAction(title: "Add", image: UIImage(systemName: "plus"), handler: { action in
+                        
+                    }),
+                    UIAction(title: "Remove", image: UIImage(systemName: "minus"), handler: { action in
+                        
+                    }),
+                    UIAction(title: "Update", image: UIImage(systemName: "arrow.up"), handler: { action in
+                        
+                    })
+                ]),
+                UIMenu(title: "States", image: UIImage(systemName: "square.on.square"), children: [
+                    UIAction(title: "Load", image: UIImage(systemName: "square.and.arrow.up"), handler: { action in
+                        
+                    }),
+                    UIAction(title: "Save", image: UIImage(systemName: "square.and.arrow.down"), handler: { action in
+                        
+                    })
+                ])
+            ])
+        })
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        if #available(iOS 15, *) {
+            guard let sectionName = dataSource.sectionIdentifier(for: indexPath.section) else {
+                return
+            }
+            
+            let itemIdentifiers = dataSource.snapshot().itemIdentifiers(inSection: sectionName)
+            switch (sectionName) {
+            case "Imported":
+                citraWrapper.insert(path: (itemIdentifiers[indexPath.row] as! ImportedItem).path)
+                break
+            case "Installed":
+                citraWrapper.insert(path: (itemIdentifiers[indexPath.row] as! InstalledItem).path)
+                break
+            default:
+                break
+            }
+            
+            let emulationViewController = EmulationViewController()
+            emulationViewController.modalPresentationStyle = .overFullScreen
+            present(emulationViewController, animated: true)
+        } else {
+            
         }
     }
 }

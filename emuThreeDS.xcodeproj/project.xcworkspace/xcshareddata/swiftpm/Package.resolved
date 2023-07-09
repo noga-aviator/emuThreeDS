@@ -15,7 +15,7 @@
       "location" : "https://github.com/facebook/zstd",
       "state" : {
         "branch" : "dev",
-        "revision" : "bd00ec6804f38abc78f05d424f15797b1e485b41"
+        "revision" : "e4aeaebc201ba49fec50b087aeb15343c63712e5"
       }
     }
   ],

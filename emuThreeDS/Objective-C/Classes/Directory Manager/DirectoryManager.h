@@ -8,5 +8,6 @@
 #pragma once
 
 namespace DirectoryManager {
+const char* BundleDirectory();
 const char* DocumentsDirectory();
 }

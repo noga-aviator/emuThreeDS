@@ -20,8 +20,9 @@
 #include "core/frontend/emu_window.h"
 #include "video_core/renderer_vulkan/vk_platform.h"
 
-namespace Vulkan {
+#include "DirectoryManager.h"
 
+namespace Vulkan {
 vk::DynamicLoader& GetVulkanLoader() {
     static vk::DynamicLoader dl("@executable_path/Frameworks/libMoltenVK.dylib");
     return dl;
