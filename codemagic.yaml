@@ -7,10 +7,6 @@ workflows:
         XCODE_SCHEME: "MyApp"
         XCODE_BUILD_CONFIGURATION: "Release"
     scripts:
-      - name: Install dependencies
-        script: |
-          cd $FCI_BUILD_DIR
-          pod install
       - name: Build IPA file
         script: |
           cd $FCI_BUILD_DIR
