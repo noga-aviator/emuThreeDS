@@ -1,0 +1,21 @@
+workflows:
+  ios:
+    name: iOS Workflow
+    environment:
+      vars:
+        XCODE_PROJECT_PATH: "./emuThreeDs.xcodeproj"
+        XCODE_SCHEME: "MyApp"
+        XCODE_BUILD_CONFIGURATION: "Release"
+    scripts:
+      - name: Install dependencies
+        script: |
+          cd $FCI_BUILD_DIR
+          pod install
+      - name: Build IPA file
+        script: |
+          cd $FCI_BUILD_DIR
+          xcodebuild -project $XCODE_PROJECT_PATH -scheme $XCODE_SCHEME -configuration $XCODE_BUILD_CONFIGURATION clean archive -archivePath $FCI_BUILD_DIR/build/MyApp.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+          xcodebuild -exportArchive -archivePath $FCI_BUILD_DIR/build/MyApp.xcarchive -exportOptionsPlist exportOptions.plist -exportPath $FCI_BUILD_DIR/ios/build/
+    artifacts:
+      - build/*.ipa
+
